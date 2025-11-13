@@ -94,27 +94,30 @@ for (let valor = 0; valor <= 50; valor ++) {
 }
 alert(soma) 
 //3.3
-const palavra = prompt("Digite uma palavra:");
-let contadorVogais = 0;
-const vogais = ['a', 'e', 'i', 'o', 'u'];
-const palavraMinuscula = palavra.toLowerCase();
-for (const caractere of palavraMinuscula) {
-    if (vogais.includes(caractere)) {
-        contadorVogais++;
+function verificarvogais(palavra){
+    let vogais = "aeiou";
+    palavra = palavra.tolowercase()
+    let contarvogais = 0;
+    for(let i = 0; palavra.length; i++){
+        if(vogais.includes(palavra[i])){
+            contarvogais++
+        }
     }
+    return contarvogais
 }
-console.log(`A palavra '${palavra}' tem ${contadorVogais} vogais.`);
 //3.4
-const Nomes = [];
-for (let i = 0; i < 5; i++) {
-    const nome = prompt(`Digite o nome ${i + 1}:`);
-    nomes.push(nome);
+function ordemalfabetica(){
+    let nome = [];
+    for(let i = 0; i < 5; i++){
+        let nome = prompt("digite um nome")
+        if(nome != ""){
+            nome.push(nome)
+        }
+    }
+    nome.sort();
+
+    alert(nomes)
 }
-Nomes.sort();
-console.log("Nomes em ordem alfabética:");
-Nomes.forEach(nome_ordenado => {
-    console.log(nome_ordenado);
-});
 
 //4. ENTRADA DE DADOS (prompt)
 //4.1
